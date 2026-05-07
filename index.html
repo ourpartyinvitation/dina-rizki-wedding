@@ -386,7 +386,7 @@
                 <h2 class="title" style="font-size: 2rem; margin-bottom: 20px;">Terima Kasih</h2>
                 <p class="text-sm" style="margin-bottom: 15px;">Kami yang berbahagia</p>
                 <p class="text-sm" style="margin-bottom: 20px; font-style: italic;">
-                    Merupakan suatu kebanggaan dan kehormatan bagi kami apabila <span id="rsvp-nama">Bapak/Ibu/Saudara/i</span> berkenan hadir dan memberikan doa restu kepada kami.
+                    Merupakan suatu kebanggaan dan kehormatan bagi kami apabila <span id="guest-name-closing">Bapak/Ibu/Saudara/i</span> berkenan hadir dan memberikan doa restu kepada kami.
                 </p>
                 <p class="text-sm" style="font-weight: 500;">Wasalammu'alaikum wa rahmatullahi wabarakatuh</p>
                 <h2 class="title" style="font-size: 2rem; margin-top: 20px;">Gina & Rizki</h2>
@@ -397,17 +397,25 @@
 
     <script>
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybOiUmspgioHIiFgSbykHMrXjrlDREMXL3buMxN_ckNP2sPu0Nk2TMSz72WHL-tY05zQ/exec';
-        
+
         // 1. Ambil Parameter URL ?to=Guest
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('to');
-        
+
         if (guestName) {
+            // Update nama di Cover
             document.getElementById('guest-name-display').innerText = guestName;
-            // Set input RSVP
+            
+            // Update nama di Kalimat Penutup (Section 11)
+            const closingName = document.getElementById('guest-name-closing');
+            if(closingName) closingName.innerText = guestName;
+
+            // Set input RSVP di form
             const rsvpNamaInput = document.getElementById('rsvp-nama');
-            rsvpNamaInput.value = guestName;
-            rsvpNamaInput.disabled = true; // Kunci inputan agar tidak bisa diubah
+            if(rsvpNamaInput) {
+                rsvpNamaInput.value = guestName;
+                rsvpNamaInput.disabled = true; 
+            }
         }
 
         // 2. Fungsi Tombol "Let's Open"
