@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gina & Rizki - Wedding Invitation</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
+        /* Import Font Agatta */
+        @font-face {
+            font-family: 'Agatta';
+            src: url('Agatta.ttf') format('truetype'); /* Sesuaikan nama file dan formatnya */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Import Font Roilega */
+        @font-face {
+            font-family: 'Roilega';
+            src: url('Roilega.otf') format('opentype'); /* Sesuaikan nama file dan formatnya */
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* === GLOBAL STYLES === */
         :root {
             --primary-font: 'Playfair Display', serif;
             --secondary-font: 'Montserrat', sans-serif;
+            --font-agatta: 'Agatta', serif;
+            --font-roilega: 'Roilega', sans-serif;
             --glass-bg: rgba(0, 0, 0, 0.5);
             --glass-border: rgba(255, 255, 255, 0.2);
             --text-color: #ffffff;
@@ -38,27 +58,27 @@
 
         /* === BACKGROUND IMAGES (Silakan Ganti URL di sini) === */
         /* Page 1: Cover */
-        .bg-page-1 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-1.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-1 { background-image: url('https://gina-rizki.imgix.net/g-r-1.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 2: Intro */
-        .bg-page-2 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-1.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-2 { background-image: url('https://gina-rizki.imgix.net/g-r-1.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 3: Quote */
-        .bg-page-3 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-3 { background-image: url('https://gina-rizki.imgix.net/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 4: Groom */
-        .bg-page-4 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-4 { background-image: url('https://gina-rizki.imgix.net/g-r-3.jpg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 5: Bride */
-        .bg-page-5 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-5 { background-image: url('https://gina-rizki.imgix.net/g-r-4.jpg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 6: Save the Date & Location */
-        .bg-page-6 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-6 { background-image: url('https://gina-rizki.imgix.net/g-r-5.jpg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 7: Countdown */
-        .bg-page-7 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-7 { background-image: url('https://gina-rizki.imgix.net/g-r-6.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 8: Gallery (Full Screen) */
-        .bg-page-8 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-8 { background-image: url('https://gina-rizki.imgix.net/g-r-7.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 9: RSVP */
-        .bg-page-9 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-9 { background-image: url('https://gina-rizki.imgix.net/g-r-8.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 10: Gift */
-        .bg-page-10 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-10 { background-image: url('https://gina-rizki.imgix.net/g-r-9.jpeg?q=80&w=2000&auto=format&fit=crop'); }
         /* Page 11: Closing */
-        .bg-page-11 { background-image: url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=2000&auto=format&fit=crop'); }
+        .bg-page-11 { background-image: url('https://gina-rizki.imgix.net/g-r-10.jpeg?q=80&w=2000&auto=format&fit=crop'); }
 
         /* === LAYOUT & PARALLAX === */
         .section {
@@ -253,23 +273,23 @@
 
         <section class="section bg-page-4">
             <div class="glass-box">
-                <p class="subtitle">The Groom</p>
-                <h2 class="title" style="font-size: 2.5rem;">Rizki<br>Febiansyah</h2>
+                <p class="subtitle" style="text-decoration: underline;">The Groom</p>
+                <h1 class="title" style="font-size: 3rem;font-family: 'Roilega';">Rizki<h1><h2 class="title" style="font-size: 2rem;font-family: 'Agatta';">Febiansyah</h2>
                 <p class="text-sm" style="margin-top: 20px;">Putra bungsu dari<br>Bapak H. Zainudin & Ibu Hj. Watini</p>
             </div>
         </section>
 
         <section class="section bg-page-5">
             <div class="glass-box">
-                <p class="subtitle">The Bride</p>
-                <h2 class="title" style="font-size: 2.5rem;">Neng Gina<br>Sri Rahayu</h2>
+                <p class="subtitle" style="text-decoration: underline;">The Bride</p>
+                <h2 class="title" style="font-size: 1.5rem;font-family: 'Agatta';">Neng<h4><h1 class="title" style="font-size: 3rem;font-family: 'Roilega';">Gina</h1><h2 class="title" style="font-size: 2rem;font-family: 'Agatta';">Sri Rahayu</h2>
                 <p class="text-sm" style="margin-top: 20px;">Putri sulung dari<br>Bapak Tetep Ruchimat & Ibu Teti Wartika</p>
             </div>
         </section>
 
         <section class="section bg-page-6">
             <div class="glass-box">
-                <h2 class="title" style="font-size: 2.5rem;">G&R</h2>
+                <h2 class="title" style="font-size: 2.5rem;"><img src="favicon.ico"></h2>
                 <p class="subtitle">Save Our Date</p>
                 <p class="date" style="font-weight: 600;">SABTU, 06 JUNI 2026</p>
                 
@@ -602,9 +622,13 @@
 
         // --- CONFIGURATION CAROUSEL ---
         const galleryImages = [
-            'https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-1.jpeg?q=80&w=800',
-            'https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-2.jpeg?q=80&w=800',
-            'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800' // Contoh gambar ke-3
+            'https://gina-rizki.imgix.net/g-r-c-1.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-2.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-3.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-4.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-5.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-6.jpeg?q=80&w=800',
+            'https://gina-rizki.imgix.net/g-r-c-7.jpeg?q=80&w=800', // Contoh gambar ke-3
         ];
 
         let currentSlide = 0;
