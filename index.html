@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wedding of Imam & Nandira</title>
+    <title>The Wedding of Gina & Rizki</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -36,7 +36,8 @@
 
         /* === UTILITIES === */
         .text-center { text-align: center; }
-        .heading { font-family: var(--font-heading); font-weight: 600; color: var(--accent); }
+        /* .heading { font-family: var(--font-heading); font-weight: 600; color: var(--accent); } */
+        .heading { font-family: var(--font-heading); font-weight: 600; color: white; }
         .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         section { padding: 60px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -45,7 +46,7 @@
         #cover {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://groovepublic.com/wp-content/uploads/2024/03/reveused-imam-nandira-00162.jpg.jpeg') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-1.jpeg') center/cover;
             z-index: 9999;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             transition: transform 1s ease-in-out;
@@ -62,7 +63,7 @@
         /* === HERO SECTION === */
         #hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://groovepublic.com/wp-content/uploads/2025/03/reveused-imam-nandira-00141.jpg.jpeg') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://69eec3b7abe5326bdb41c716.imgix.net/gina-rizki/g-r-1.jpeg') center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
         #hero h2 { font-size: 2rem; margin-bottom: 10px; }
@@ -111,11 +112,12 @@
 
     <div id="cover">
         <div class="cover-content">
-            <p class="heading">The Wedding of</p>
-            <h1 class="heading">Imam & Nandira</h1>
+            <h2 class="heading">The Wedding of</h2>
+            <h1 class="heading">Gina & Rizki</h1>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">06 Juni 2026</p>
             <p>Dear,</p>
             <h2 id="guest-name" class="heading" style="margin: 10px 0;">Guest Name</h2>
-            <p style="font-size: 0.8rem; color: var(--text-muted);">We apologize if there is any misspelling of name or title</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);"><i></i>We apologize if there is any misspelling of name or title</i></p>
             <button class="btn-open" onclick="openInvitation()">Let's Open</button>
         </div>
     </div>
